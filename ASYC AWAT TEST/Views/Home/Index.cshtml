@@ -1,0 +1,20 @@
+﻿<div id="resultarea"> 
+
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    $.ajax({
+        type: "POST",
+        url: "/Home/without_async_awat",
+        
+        //data: { 'values': "Vimal;Raturi;Vinay;Nainital;Uttarakhand;Chamoli;India" },
+        data: { 'values': "Vimal;Raturi;Vinay;Uttarakhand;Chamoli;India" },
+        //dataType: 'json',
+
+        success: function (data) {
+            $("#resultarea").append(data);
+        }
+    });
+</script>
